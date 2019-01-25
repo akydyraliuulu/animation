@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style/style2.css" />
+  </head>
+  <body>
+
+    <!-- <div class="anime"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5gCeHuMC72_FXbFBOQsnD9qdXOVisDhbzGwEe43jgotaOF-FC"/></div> -->
+    <div class="view">
+      <div class="scene">
+        <div class="carousel">
+          <div class="carousel__cell c1">1</div>
+          <div class="carousel__cell 2">2</div>
+          <div class="carousel__cell 3">3</div>
+          <div class="carousel__cell 4">4</div>
+          <div class="carousel__cell 5">5</div>
+          <div class="carousel__cell 6">6</div>
+          <div class="carousel__cell 7">7</div>
+          <div class="carousel__cell 8">8</div>
+          <div class="carousel__cell 9">9</div>
+        </div>
+      </div>
+      <p style="text-align: center;">
+        <button class="previous-button">Previous</button>
+        <button class="next-button">Next</button>
+      </p>
+    </div>
+    <script>
+      var carousel = document.querySelector(".carousel");
+      var cellCount = 9;
+      var selectedIndex = 0;
+
+      function rotateCarousel() {
+        var angle = (selectedIndex / cellCount) * -360;
+        carousel.style.transform =
+          "translateZ(-288px) rotateY(" + angle + "deg)";
+      }
+
+      var prevButton = document.querySelector(".previous-button");
+      prevButton.addEventListener("click", function() {
+        selectedIndex--;
+        rotateCarousel();
+      });
+
+      var nextButton = document.querySelector(".next-button");
+      nextButton.addEventListener("click", function() {
+        selectedIndex++;
+        rotateCarousel();
+      });
+
+      var fireAll = document.querySelector(".fire-away");
+      fireAway.addEventListener("click", function() {
+        $(".foo").toggleClass("active");
+        $(".fire-away").toggleClass("fired");
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        // Add the active class. You can also just use :active
+        $(".foo").click(function() {
+          $(this).toggleClass("active");
+        });
+        $(".fire-away").click(function() {
+          $(".foo").toggleClass("active");
+          $(".fire-away").toggleClass("fired");
+        });
+      });
+    </script>
+  </body>
+</html>
