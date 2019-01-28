@@ -5,20 +5,55 @@
   </head>
   <body>
     <div class="actions">
-      <div id="images">
-        <div id="something" onclick="ani()">
-          <img class="image1" src="images/ok.png" />
-        </div>
-        <div><img class="image2" src="images/ok.png" /></div>
-        <div><img class="image3" src="images/ok.png" /></div>
+      <div id="something">
+        <img id="image1" src="images/ok.png" onclick="onImageClick()" />
       </div>
+      <div><img id="image2" src="images/ok.png" /></div>
+      <div><img id="image3" src="images/ok.png" /></div>
     </div>
     <div class="gift_box"></div>
 
-    <script>
-      function ani() {
-        document.getElementById("something").className = "image1";
+    <script type="text/javascript">
+      window.requestAnimationFrame =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+      var field = document.getElementById("something");
+      var image1 = document.getElementById("image1");
+      var maxX = field.clientWidth - image1.offsetWidth;
+      var maxY = field.clientHeight - image1.offsetHeight;
+      var duration = 5;
+      var gridSize = 50;
+      var start = null;
+      const a = 3;
+      var moveAway = false;
+      function onImageClick() {
+        requestAnimationFrame(step);
+        console.log("onclick");
       }
+      function step(timestamp) {
+        var progress, x, y, y2;
+        if (start === null) start = timestamp;
+        progress = (timestamp - start) / duration / 250;
+        if (moveAway) {
+          x = y = 100;
+        } else {
+          x = (progress * maxX) / gridSize;
+          y = 2 * x * a - x * x;
+        }
+        image1.style.left = Math.min(maxX, gridSize * x) + "px";
+        image1.style.bottom = maxY / 2 + gridSize * y + "px";
+        if (progress < 5 / 6) {
+          //start = null;
+          requestAnimationFrame(step);
+        } else if (!moveAway) {
+          moveAway = true;
+          // x = y = 100;
+          requestAnimationFrame(step);
+        }
+      }
+      
     </script>
   </body>
 </html>
