@@ -10,6 +10,7 @@
 }
 
 .actions {
+  display: inline-block;
   position: absolute;
   bottom: 0;
   margin-bottom: 20px;
@@ -20,10 +21,10 @@
 
 .gift_box {
   position: absolute;
-  width: 209px;
-  height: 148px;
-  top: 50%;
-  left: 70%;
+  width: 200px;
+  height: 150px;
+  top: 80%;
+  right: 0;
   box-sizing: border-box;
   border: 5px solid black;
   border-radius: 40px 40px 50px 50px / 74px 74px 74px 74px;
@@ -32,89 +33,102 @@
   z-index: 1;
 }
 
-#cf_controls div {
-  cursor:pointer;
+/* #images:hover #something {
+  -webkit-transform: rotate(180deg);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transform: rotate(180deg);
+  -moz-transition: all 1s ease-in-out;
+  -o-transform: rotate(180deg);
+  -o-transition: all 1s ease-in-out;
+  -ms-transform: rotate(180deg);
+  -ms-transition: all 1s ease-in-out;
+  transform: rotate(180deg);
+  transition: all 1s ease-in-out;
 }
+
+#something {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  border-radius: 30px;
+  float: left;
+  -webkit-transform-origin:300px 30px;
+  -moz-transform-origin:300px 30px;
+  -o-transform-origin:300px 30px;
+  -ms-transform-origin:300px 30px;
+  transform-origin:300px 30px;
+} */
 
 .image1 {
   width: 100px;
   height: auto;
+  float: left;
   /* -webkit-animation: myOrbit 2s ease-in-out ; 
   -moz-animation: myOrbit 2s ease-in-out ;
   -o-animation: myOrbit 2s ease-in-out ; 
   animation: myOrbit 2s ease-in-out ;  */
 
-  -webkit-animation: image1 15s infinite linear;
-  animation: image1 15s infinite linear
+  -webkit-animation: image1 1s linear;
+  animation: image1 1s linear
 }
 
-
-
 @-webkit-keyframes myOrbit {
-  from { -webkit-transform: scale(1.5,1.5) rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -webkit-transform: scale(1,1) rotate(270deg) translate(400px,600px) rotate(-90deg); }
+  from { -webkit-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
+  to   { -webkit-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
 }
 
 @-moz-keyframes myOrbit {
-  from { -moz-transform: scale(1.5,1.5) rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -moz-transform: scale(1,1) rotate(270deg) translate(400px,600px) rotate(-90deg); }
+  from { -moz-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
+  to   { -moz-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
 }
 
 @-o-keyframes myOrbit {
-  from { -o-transform: scale(1.5,1.5) rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -o-transform: scale(1,1) rotate(270deg) translate(400px,600px) rotate(-90deg); }
+  from { -o-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
+  to   { -o-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
 }
 
 @keyframes myOrbit {
-  from { transform: scale(1.5,1.5) rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { transform: scale(1,1) rotate(270deg) translate(400px,600px) rotate(-90deg); }
+  from { transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
+  to   { transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
 }
+
 .image2 {
   width: 100px;
   height: auto;
-  -webkit-transition: all 500ms cubic-bezier(0.000, 1, 1.000, 1); /* older webkit */
--webkit-transition: all 500ms cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-   -moz-transition: all 500ms cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-     -o-transition: all 500ms cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-        transition: all 500ms cubic-bezier(0.000, 1.650, 1.000, 1.650); /* custom */
-
--webkit-transition-timing-function: cubic-bezier(0.000, 1, 1.000, 1); /* older webkit */
--webkit-transition-timing-function: cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-   -moz-transition-timing-function: cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-     -o-transition-timing-function: cubic-bezier(0.000, 1.650, 1.000, 1.650); 
-        transition-timing-function: cubic-bezier(0.000, 1.650, 1.000, 1.650); /* custom */
+  float: left;
 }
 
 .image3 {
   width: 100px;
   height: auto;
+  float: left;
 }
 
 @-webkit-keyframes image1 {
  
   9.36% {
-    -webkit-transform: translate(100px, -150px);
+    -webkit-transform:  translate(0px, -150px);
   }
   18.72% {
-    -webkit-transform: translate(150px, -200px);
+    -webkit-transform: rotate(360deg) translate(50px, -200px);
   }
   43.68% {
-    -webkit-transform: translate(200px, -300px) scale(2, 2);
+    -webkit-transform: rotate(360deg) translate(100px, -300px);
   }
   60.84% {
-    -webkit-transform: translate(250px, -350px);
+    -webkit-transform: rotate(360deg) translate(200px, -400px);
   }
   78% {
-    -webkit-transform: translate(300px, -350px);
+    -webkit-transform: rotate(360deg) translate(300px, -450px);
   }
   85.8% {
-    -webkit-transform: translate(450px, -250px);
+    -webkit-transform: rotate(360deg) translate(450px, -450px);
   }
   93.6% {
-    -webkit-transform: translate(450px, -200px);
+    -webkit-transform: rotate(360deg) translate(500px, -350px);
   }
   100% {
-    -webkit-transform: translate(400px, -164px) scale(0, 0);
+    -webkit-transform: rotate(360deg) translate(550px, -250px) scale(0, 0);
   }
 }
 

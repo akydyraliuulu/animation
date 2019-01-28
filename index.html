@@ -4,30 +4,21 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <div class="actions" id="cf">
-      <div id="cf_controls">
-      <button><img class="image1" src="images/ok.png" /></button>
-      <button><img class="image2" src="images/ok.png" /></button>
-      <button><img class="image3" src="images/ok.png" /></button>
+    <div class="actions">
+      <div id="images">
+        <div id="something" onclick="ani()">
+          <img class="image1" src="images/ok.png" />
         </div>
+        <div><img class="image2" src="images/ok.png" /></div>
+        <div><img class="image3" src="images/ok.png" /></div>
+      </div>
     </div>
     <div class="gift_box"></div>
 
-
-  <script>
-    $(document).ready(function() {
-  $("#cf_controls").on('click', 'span', function() {
-    $("#cf").removeClass("opaque");
-
-    var newImage = $(this).index();
-
-    $("#cf7 img").eq(newImage).addClass("opaque");
-
-    $("#cf7_controls span").removeClass("selected");
-    $(this).addClass("selected");
-  });
-});
-  </script>
-
+    <script>
+      function ani() {
+        document.getElementById("something").className = "image1";
+      }
+    </script>
   </body>
 </html>
