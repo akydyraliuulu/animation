@@ -9,7 +9,7 @@
   padding: 10px;
 }
 
-.actions {
+ .actions {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -17,14 +17,14 @@
   right: 25%;
   left: 50%;
   margin-left: -150px;
-}
+} 
 
 .gift_box {
   position: absolute;
-  width: 200px;
-  height: 150px;
-  top: 80%;
-  right: 0;
+  width: 180px;
+  height: 130px;
+  top: 75%;
+  left: 55%;
   box-sizing: border-box;
   border: 5px solid black;
   border-radius: 40px 40px 50px 50px / 74px 74px 74px 74px;
@@ -33,104 +33,21 @@
   z-index: 1;
 }
 
-/* #images:hover #something {
-  -webkit-transform: rotate(180deg);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transform: rotate(180deg);
-  -moz-transition: all 1s ease-in-out;
-  -o-transform: rotate(180deg);
-  -o-transition: all 1s ease-in-out;
-  -ms-transform: rotate(180deg);
-  -ms-transition: all 1s ease-in-out;
-  transform: rotate(180deg);
-  transition: all 1s ease-in-out;
-}
-
-#something {
-  width: 100px;
-  height: auto;
+#image1 {
   position: absolute;
-  border-radius: 30px;
-  float: left;
-  -webkit-transform-origin:300px 30px;
-  -moz-transform-origin:300px 30px;
-  -o-transform-origin:300px 30px;
-  -ms-transform-origin:300px 30px;
-  transform-origin:300px 30px;
-} */
-
-.image1 {
-  width: 100px;
-  height: auto;
-  float: left;
-  /* -webkit-animation: myOrbit 2s ease-in-out ; 
-  -moz-animation: myOrbit 2s ease-in-out ;
-  -o-animation: myOrbit 2s ease-in-out ; 
-  animation: myOrbit 2s ease-in-out ;  */
-
-  -webkit-animation: image1 1s linear;
-  animation: image1 1s linear
-}
-
-@-webkit-keyframes myOrbit {
-  from { -webkit-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -webkit-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
-}
-
-@-moz-keyframes myOrbit {
-  from { -moz-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -moz-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
-}
-
-@-o-keyframes myOrbit {
-  from { -o-transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { -o-transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
-}
-
-@keyframes myOrbit {
-  from { transform: rotate(0deg) translate(30px,0px) rotate(0deg); }
-  to   { transform: rotate(270deg) translate(calc(100%-100px),calc(70%-100px)) rotate(-90deg); }
-}
-
-.image2 {
   width: 100px;
   height: auto;
   float: left;
 }
 
-.image3 {
+#image2 {
   width: 100px;
   height: auto;
   float: left;
 }
 
-@-webkit-keyframes image1 {
- 
-  9.36% {
-    -webkit-transform:  translate(0px, -150px);
-  }
-  18.72% {
-    -webkit-transform: rotate(360deg) translate(50px, -200px);
-  }
-  43.68% {
-    -webkit-transform: rotate(360deg) translate(100px, -300px);
-  }
-  60.84% {
-    -webkit-transform: rotate(360deg) translate(200px, -400px);
-  }
-  78% {
-    -webkit-transform: rotate(360deg) translate(300px, -450px);
-  }
-  85.8% {
-    -webkit-transform: rotate(360deg) translate(450px, -450px);
-  }
-  93.6% {
-    -webkit-transform: rotate(360deg) translate(500px, -350px);
-  }
-  100% {
-    -webkit-transform: rotate(360deg) translate(550px, -250px) scale(0, 0);
-  }
+#image3 {
+  width: 100px;
+  height: auto;
+  float: left;
 }
-
-
-
