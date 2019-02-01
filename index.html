@@ -11,7 +11,7 @@
       <div><img id="image2" src="images/ok.png" /></div>
       <div><img id="image3" src="images/ok.png" /></div>
     </div>
-    <div class="gift_box"></div>
+    <img id="box_close" src="images/box_closing.gif" style="display:none;" />
 
     <script type="text/javascript">
       window.requestAnimationFrame =
@@ -21,6 +21,7 @@
         window.msRequestAnimationFrame;
       var field = document.getElementById("something");
       var image1 = document.getElementById("image1");
+      var box_close = document.getElementById("box_close");
       var maxX = field.clientWidth - image1.offsetWidth;
       var maxY = field.clientHeight - image1.offsetHeight;
       var duration = 5;
@@ -29,6 +30,7 @@
       const a = 3;
       var moveAway = false;
       function onImageClick() {
+        box_close.setAttribute("style", "display:block");
         requestAnimationFrame(step);
         console.log("onclick");
       }
@@ -51,9 +53,12 @@
           moveAway = true;
           // x = y = 100;
           requestAnimationFrame(step);
+          var delayInMilliseconds = 3500;
+          setTimeout(function() {
+            box_close.style.display = "none";
+          }, delayInMilliseconds);
         }
       }
-      
     </script>
   </body>
 </html>
